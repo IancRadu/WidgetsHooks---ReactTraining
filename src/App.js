@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Accordion from "./components/Accordion";
+import Search from "./components/Search";
 
-function App() {
+const items = [
+  {
+    title: "Lorem",
+    content:
+      "Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+  },
+  {
+    title: "dummy",
+    content:
+      "text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  },
+  {
+    title: "It has survived",
+    content:
+      "not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+];
+
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Search />
+      {/* /* <Accordion items={items} /> */}
     </div>
   );
-}
-
-export default App;
+};
